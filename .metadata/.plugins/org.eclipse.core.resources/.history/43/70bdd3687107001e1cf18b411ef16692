@@ -1,0 +1,7 @@
+package basic;
+//array ->collection similar dataytpe values into single variable
+public class ArrayDemo {
+	public static void main(String[] args) {
+		
+	}
+}

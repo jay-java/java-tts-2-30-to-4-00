@@ -1,0 +1,12 @@
+package basic;
+
+class data{
+	int id;
+	String name;
+	double price
+}
+public class ConstrucotrDemo {
+	public static void main(String[] args) {
+		
+	}
+}

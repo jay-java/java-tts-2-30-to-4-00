@@ -1,0 +1,9 @@
+package basic;
+
+public class WrapperClasses {
+	public static void main(String[] args) {
+		int i=1;
+		Integer j = new Integer(12);
+		System.out.println(j);
+	}
+}

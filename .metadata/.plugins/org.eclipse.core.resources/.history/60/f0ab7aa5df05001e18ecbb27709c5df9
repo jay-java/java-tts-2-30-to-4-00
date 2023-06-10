@@ -1,0 +1,72 @@
+package basic;
+
+import java.util.Scanner;
+
+/* 1.simple if
+ * 2.if else
+ * 3.nested if
+ * 4.else if ladder
+ * 5.switch case
+ * */
+
+//three stream
+//1.in
+//2.out
+//3.err
+
+//types casting 
+//1.implicit ->
+//2.explicit
+class name{
+	public void run() {
+		System.out.println("hello run function");
+	}
+}
+public class ConditionalOperators {
+	public static void main(String[] args) {
+		System.out.println("hello user");
+		name obj = new name();
+		obj.run();
+		System.out.println();
+		double d1 = 3;
+		System.out.println(d1);
+		int i1 = (int)12.3;
+		System.out.println(i1);
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("enter d = ");
+		double d = sc.nextDouble();
+		System.out.println(d);
+		System.out.println("enter i = ");
+		int i = sc.nextInt();
+		System.out.println(i);
+		System.out.println("enter j = ");
+		int j = sc.nextInt();
+		System.out.println(j);
+		double k = (double)i/(double)j;
+		System.out.println("division of i and j = "+k);
+		//simple if
+		if(i>j) {
+			System.out.println("yes i is greater than j");
+		}
+		
+		
+		//if else
+		if(i>j) {
+			System.out.println("yes i is greater than j");
+		}
+		else if(i == j) {
+			System.out.println("i and j are equal");
+		}
+		else {
+			System.out.println("j is greater than i");
+		}
+		
+		//nested if
+		System.out.println("enter age : ");
+		int age = sc.nextInt();
+		if() {
+			
+		}
+	}
+}

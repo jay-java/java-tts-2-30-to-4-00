@@ -1,0 +1,26 @@
+package basic;
+//types 
+//1.defualt
+//2.parameterized
+//3.copy
+class area{
+	int l,b;
+	area(){
+		System.out.println("defualt cons");
+	}
+	area(int i){
+		System.out.println("defualt cons");
+	}
+	public void run() {
+		System.out.println("run method in area class");
+	}
+	public void calculatArea() {
+		System.err.println("area of rec : "+(l*b));
+	}
+}
+public class ConstrucotrDemo {
+	public static void main(String[] args) {
+		area a = new area();
+//		a.run();
+	}
+}

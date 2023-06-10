@@ -1,0 +1,8 @@
+package basic;
+
+public class WrapperClasses {
+	public static void main(String[] args) {
+		int i=1;
+		
+	}
+}

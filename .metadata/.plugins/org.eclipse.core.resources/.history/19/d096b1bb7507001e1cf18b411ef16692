@@ -1,0 +1,13 @@
+package basic;
+
+class area{
+	int l,b;
+	area(){
+		System.out.println("defualt cons");
+	}
+}
+public class ConstrucotrDemo {
+	public static void main(String[] args) {
+		
+	}
+}

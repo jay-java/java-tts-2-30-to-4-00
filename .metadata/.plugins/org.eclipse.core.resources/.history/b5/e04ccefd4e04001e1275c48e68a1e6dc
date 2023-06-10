@@ -1,0 +1,15 @@
+package basic;
+
+class test{
+	public static void main(String[] args) {
+		System.out.println("hi test class");
+	}
+}
+public class Second {
+	public static void main(String[] args) {
+		System.out.println("hi main class");
+	}
+	public static void main(Integer[] args) {
+		
+	}
+}
