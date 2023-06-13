@@ -1,0 +1,12 @@
+package OOPS;
+class A{
+	
+}
+class B{
+	
+}
+public class InheritanceDemo {
+	public static void main(String[] args) {
+		
+	}
+}

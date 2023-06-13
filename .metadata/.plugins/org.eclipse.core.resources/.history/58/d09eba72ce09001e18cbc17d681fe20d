@@ -1,0 +1,16 @@
+package OOPS;
+class A{
+	public void classAmethod() {
+		System.out.println("class A");
+	}
+}
+class B{
+	public void classBmethod() {
+		System.out.println("class B");
+	}
+}
+public class InheritanceDemo {
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,7 @@
+package basic;
+
+public class multiDiemnsional {
+	public static void main(String[] args) {
+		int arr[][] = {};
+	}
+}

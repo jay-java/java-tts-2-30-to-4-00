@@ -1,0 +1,9 @@
+package OOPS;
+class Overload{
+	public void area(int l,int b) {
+		
+	}
+}
+public class Overloading {
+
+}

@@ -1,0 +1,14 @@
+package OOPS;
+class P{
+	public void call() {
+		System.out.println("call method in P class");
+	}
+}
+class C{
+	public void call() {
+		System.out.println("call method in C class");
+	}
+}
+public class OverrideDemo {
+
+}

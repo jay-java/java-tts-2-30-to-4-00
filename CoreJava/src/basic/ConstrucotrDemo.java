@@ -1,7 +1,7 @@
 package basic;
 
 //types 
-//1.defualt
+//1.default
 //2.parameterized
 //3.copy
 class area {
@@ -20,19 +20,30 @@ class area {
 		this.b = b;
 		System.out.println("area of rect : " + (l * b));
 	}
+	
 	public void run() {
 		System.out.println("run method in area class");
 	}
 	public void calculatArea() {
 		System.out.println("area of rec : " + (l * b));
 	}
-	
 }
-
+class newArea{
+	int l,b;
+	newArea(area a){
+		this.l = a.l;
+		this.b = a.b;
+	}
+	public void calculatArea() {
+		System.out.println("area of rec : " + (l * b));
+	}
+}
 public class ConstrucotrDemo {
 	public static void main(String[] args) {
 		area a = new area(12, 3);
 		area a1 = new area();
 		a.calculatArea();
+		newArea n = new newArea(a);
+		n.calculatArea();
 	}
 }

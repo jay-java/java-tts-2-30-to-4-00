@@ -1,0 +1,8 @@
+package basic;
+
+public class StringDemo {
+	public static void main(String[] args) {
+		String name="hellojava";
+		System.out.println(name.length());
+	}
+}
