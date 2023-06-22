@@ -1,0 +1,33 @@
+package OOPS;
+class emp{
+	int id;
+	String name;
+	double salary;
+	public void setId(int id) {
+		this.id= id;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setName(String name) {
+		this.name=name;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setSalary(double salary) {
+		this.salary= salary;
+	}
+	public double getSaalary() {
+		return salary;
+	}
+}
+public class EncapsulationDemo {
+	public static void main(String[] args) {
+		emp e1 = new emp();
+		e1.setId(12);
+		e1.setName("java");
+		e1.setSalary(23232.2);
+		System.out.println(e1.getId());
+	}
+}

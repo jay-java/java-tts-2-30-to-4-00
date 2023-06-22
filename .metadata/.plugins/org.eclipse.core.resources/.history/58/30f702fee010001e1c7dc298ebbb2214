@@ -1,0 +1,15 @@
+package OOPS;
+class Data{
+	int id;
+	String name;
+	static int i =1;
+	public void change() {
+		System.out.println(i);
+	}
+}
+public class StaticKeyword {
+	public static void main(String[] args) {
+		Data d =new Data();
+		d.change();
+	}
+}

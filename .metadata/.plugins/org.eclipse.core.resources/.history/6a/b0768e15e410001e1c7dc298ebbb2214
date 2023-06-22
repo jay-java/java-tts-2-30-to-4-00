@@ -1,0 +1,18 @@
+package OOPS;
+
+class User{
+	final int i=1;
+	public void change() {
+		
+	}
+}
+class User2{
+	public void change() {
+		
+	}
+}
+public class FinalKeyword {
+	public static void main(String[] args) {
+		
+	}
+}

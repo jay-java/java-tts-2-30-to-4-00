@@ -1,0 +1,14 @@
+package OOPS;
+class emp{
+	int id;
+	String name;
+	double salary;
+	public void setId(int id) {
+		this.id= id;
+	}
+}
+public class EncapsulationDemo {
+	public static void main(String[] args) {
+		
+	}
+}

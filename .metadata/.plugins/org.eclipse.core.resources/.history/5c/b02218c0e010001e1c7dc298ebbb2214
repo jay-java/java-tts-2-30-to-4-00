@@ -1,0 +1,13 @@
+package OOPS;
+class Data{
+	static int i =1;
+	public void change() {
+		i++;
+		System.out.println(i);
+	}
+}
+public class StaticKeyword {
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,19 @@
+package OOPS;
+class RBI{
+    abstract public void interest();
+	public void HL();
+}
+class SBI extends RBI{
+	
+}
+class PNB extends RBI{
+	
+}
+class JAVA extends RBI{
+	
+}
+public class AbstractionDemo {
+	public static void main(String[] args) {
+		
+	}
+}
