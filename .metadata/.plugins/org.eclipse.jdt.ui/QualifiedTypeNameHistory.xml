@@ -4,11 +4,19 @@
     <fullyQualifiedTypeName name="java.lang.Double"/>
     <fullyQualifiedTypeName name="basic.area"/>
     <fullyQualifiedTypeName name="basic.newArea"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="OOPS.B"/>
     <fullyQualifiedTypeName name="OOPS.C"/>
     <fullyQualifiedTypeName name="OOPS.Child1"/>
     <fullyQualifiedTypeName name="OOPS.Child2"/>
     <fullyQualifiedTypeName name="OOPS.Overload"/>
     <fullyQualifiedTypeName name="OOPS.Ch"/>
+    <fullyQualifiedTypeName name="OOPS.SBI"/>
+    <fullyQualifiedTypeName name="OOPS.PNB"/>
+    <fullyQualifiedTypeName name="OOPS.Data"/>
+    <fullyQualifiedTypeName name="OOPS.emp"/>
+    <fullyQualifiedTypeName name="InterfaceDemo.Intercall"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+    <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
 </qualifiedTypeNameHistroy>

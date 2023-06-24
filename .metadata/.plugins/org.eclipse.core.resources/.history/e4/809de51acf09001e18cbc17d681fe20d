@@ -1,7 +1,0 @@
-package OOPS;
-
-public class MultipleInheritacne {
-	public static void main(String[] args) {
-		
-	}
-}

@@ -1,0 +1,12 @@
+package FileHandling;
+class UserData{
+	int id;
+	String name;
+	double salary;
+	String address;
+}
+public class SerilzationDemo {
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,22 @@
+package FileHandling;
+class UserData{
+	int id;
+	String name;
+	double salary;
+	String address;
+	long contact;
+	public UserData(int id, String name, double salary, String address, long contact) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+		this.address = address;
+		this.contact = contact;
+	}
+	
+}
+public class SerilzationDemo {
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,10 @@
+package FileHandling;
+
+import java.io.FileWriter;
+
+public class FileWriterReader {
+	public static void main(String[] args) {
+		String msg = "file handling by file  writer and reader";
+		FileWriter fr = new FileWriter("t2.txt");
+	}
+}
