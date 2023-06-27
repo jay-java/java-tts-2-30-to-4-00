@@ -1,0 +1,11 @@
+package Swing;
+
+public class SwingDemo {
+	
+	SwingDemo(){
+		
+	}
+	public static void main(String[] args) {
+		new SwingDemo();
+	}
+}

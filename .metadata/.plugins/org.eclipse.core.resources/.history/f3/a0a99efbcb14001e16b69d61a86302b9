@@ -1,0 +1,12 @@
+package collectionFramework;
+class Student{
+	private int id;
+	private String name;
+	private double per;
+	private long contact;
+}
+public class ListPractical {
+	public static void main(String[] args) {
+		
+	}
+}

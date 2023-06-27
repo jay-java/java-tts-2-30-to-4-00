@@ -1,0 +1,14 @@
+package collectionFramework;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class MapDemo {
+	public static void main(String[] args) {
+		Map map = new HashMap();
+		map.put(1, "java");
+		map.put("java", 2);
+		map.put(3.2, null);
+		map.put(null,null);
+	}
+}
