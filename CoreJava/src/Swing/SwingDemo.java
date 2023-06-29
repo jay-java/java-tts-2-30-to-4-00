@@ -2,6 +2,10 @@ package Swing;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -71,6 +75,16 @@ public class SwingDemo implements ActionListener{
 	public static void main(String[] args) {
 		new SwingDemo();
 	}
+	public static Connection createConnection() {
+		Connection conn = null;
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn =  DriverManager.getConnection("jdbc:mysql://localhost:3306/swing", "root", "");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return conn;
+	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() ==  b1) {
@@ -78,18 +92,106 @@ public class SwingDemo implements ActionListener{
 			int id = Integer.parseInt(t1.getText());
 			String name = t2.getText();
 			long contact = Long.parseLong(t3.getText());
-			String addres = t4.getText();
+			String address = t4.getText();
 			String email = t5.getText();
-			System.out.println(id+name+contact+addres+email);
+			System.out.println(id+name+contact+address+email);
+			try {
+				Connection conn = SwingDemo.createConnection();
+				String sql="insert into user(id,name,contact,address,email) values(?,?,?,?,?)";
+				PreparedStatement pst = conn.prepareStatement(sql);
+				pst.setInt(1, id);
+				pst.setString(2, name);
+				pst.setLong(3, contact);
+				pst.setString(4, address);
+				pst.setString(5, email);
+				pst.executeUpdate();
+				t1.setText("");
+				t2.setText("");
+				t3.setText("");
+				t4.setText("");
+				t5.setText("");
+				System.out.println("data inserted");
+//				executeUpdate()->DML
+//				executeQuery()->DQL
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
 		}
 		else if(e.getSource()==b2) {
 			System.out.println("search button clicked");
+			int id = Integer.parseInt(t1.getText());
+			try {
+				Connection conn = SwingDemo.createConnection();
+				String sql="select * from user where id=?";
+				PreparedStatement pst = conn.prepareStatement(sql);
+				pst.setInt(1, id);
+				ResultSet rs = pst.executeQuery();
+				if(rs.next()) {
+					t1.setText(String.valueOf(rs.getInt("id")));
+					t2.setText(rs.getString("name"));
+					t3.setText(String.valueOf(rs.getLong("contact")));
+					t4.setText(rs.getString("address"));
+					t5.setText(rs.getString("email"));
+				}
+				else {
+					new DataNotFound();
+					System.out.println("data not found");
+					t1.setText("");
+					t2.setText("");
+					t3.setText("");
+					t4.setText("");
+					t5.setText("");
+				}
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
 		}
 		else if(e.getSource()==b3) {
 			System.out.println("update button clicked");
+			int id = Integer.parseInt(t1.getText());
+			String name = t2.getText();
+			long contact = Long.parseLong(t3.getText());
+			String address = t4.getText();
+			String email = t5.getText();
+			try {
+				Connection conn = SwingDemo.createConnection();
+				String sql="update user set name=?,contact=?,address=?,email=? where id=?";
+				PreparedStatement pst = conn.prepareStatement(sql);
+				pst.setString(1, name);
+				pst.setLong(2, contact);
+				pst.setString(3, address);
+				pst.setString(4, email);
+				pst.setInt(5, id);
+				pst.executeUpdate();
+				System.out.println("data updated");
+				t1.setText("");
+				t2.setText("");
+				t3.setText("");
+				t4.setText("");
+				t5.setText("");
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+			
 		}
 		else if(e.getSource()==b4) {
 			System.out.println("delete button clicked");
+			int id = Integer.parseInt(t1.getText());
+			try {
+				Connection conn = SwingDemo.createConnection();
+				String sql="delete from user where id=?";
+				PreparedStatement pst = conn.prepareStatement(sql);
+				pst.setInt(1, id);
+				pst.executeUpdate();
+				System.out.println("data deleted");
+				t1.setText("");
+				t2.setText("");
+				t3.setText("");
+				t4.setText("");
+				t5.setText("");
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
 		}
 	}
 }

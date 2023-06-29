@@ -1,0 +1,13 @@
+package Swing;
+
+import javax.swing.JFrame;
+
+public class DataNotFound {
+	
+	DataNotFound(){
+		JFrame fr = new JFrame("Alert");
+	}
+	public static void main(String[] args) {
+		new DataNotFound();
+	}
+}
