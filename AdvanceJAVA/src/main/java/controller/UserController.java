@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.tomcat.util.log.UserDataHelper.Mode;
+
 import dao.UserDao;
 import model.Model;
 
@@ -53,6 +55,28 @@ public class UserController extends HttpServlet {
 		 		request.setAttribute("msg1", "account not registered");
 		 		request.getRequestDispatcher("login.jsp").forward(request, response);
 		 	}
+		}
+		else if(action.equalsIgnoreCase("edit")) {
+			int id = Integer.parseInt(request.getParameter("id"));
+			Model m = UserDao.getUserById(id);
+			request.setAttribute("data", m);
+			request.getRequestDispatcher("update.jsp").forward(request, response);
+		}
+		else if(action.equalsIgnoreCase("update")) {
+			Model m = new Model();
+			m.setId(Integer.parseInt(request.getParameter("id")));
+			m.setName(request.getParameter("name"));
+			m.setContact(Long.parseLong(request.getParameter("contact")));
+			m.setAddress(request.getParameter("address"));
+			m.setEmail(request.getParameter("email"));
+			m.setPassword(request.getParameter("password"));
+			UserDao.updateUser(m);
+			response.sendRedirect("home.jsp");
+		}
+		else if(action.equalsIgnoreCase("delete")) {
+			int id = Integer.parseInt(request.getParameter("id"));
+			UserDao.deleteUser(id);
+			response.sendRedirect("home.jsp");
 		}
 		
 	}

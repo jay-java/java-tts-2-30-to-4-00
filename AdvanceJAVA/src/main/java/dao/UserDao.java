@@ -87,4 +87,55 @@ public class UserDao {
 		}
 		return list;
 	}
+	public static Model getUserById(int id) {
+		Model m1 = null;
+		try {
+			Connection conn = DBConnection.createConnection();
+			String sql = "select * from user where id=?";
+			PreparedStatement pst = conn.prepareStatement(sql);
+			pst.setInt(1, id);
+			ResultSet rs = pst.executeQuery();
+			if(rs.next()) {
+				m1 = new Model();
+				m1.setId(rs.getInt("id"));
+				m1.setName(rs.getString("name"));
+				m1.setContact(rs.getLong("contact"));
+				m1.setAddress(rs.getString("address"));
+				m1.setEmail(rs.getString("email"));
+				m1.setPassword(rs.getString("password"));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return m1;
+	}
+	public static void updateUser(Model m) {
+		try {
+			Connection conn = DBConnection.createConnection();
+			String sql = "update user set name=?,contact=?,address=?,email=?,password=? where id=?";
+			PreparedStatement pst = conn.prepareStatement(sql);
+			pst.setString(1, m.getName());
+			pst.setLong(2, m.getContact());
+			pst.setString(3, m.getAddress());
+			pst.setString(4, m.getEmail());
+			pst.setString(5, m.getPassword());
+			pst.setInt(6, m.getId());
+			pst.executeUpdate();
+			System.out.println("data updated");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public static void deleteUser(int id) {
+		try {
+			Connection conn = DBConnection.createConnection();
+			String sql = "delete from user where id=?";
+			PreparedStatement pst = conn.prepareStatement(sql);
+			pst.setInt(1, id);
+			pst.executeUpdate();
+			System.out.println("data deleted");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }
