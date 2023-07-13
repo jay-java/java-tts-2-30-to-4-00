@@ -97,8 +97,16 @@ else{
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
                         <div class="dropdown-menu fade-up m-0">
-                            <a href="serviceman-register.jsp" class="dropdown-item">Upload Service</a>
-                            <a href="customer-register.jsp" class="dropdown-item">Manage Service</a>
+                            <a href="serviceman-upload-service.jsp" class="dropdown-item">Upload Service</a>
+                            <a href="serviceman-manage-service.jsp" class="dropdown-item">Manage Service</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Booked Services</a>
+                        <div class="dropdown-menu fade-up m-0">
+                            <a href="serviceman-pending-service.jsp" class="dropdown-item">Pending Service</a>
+                            <a href="serviceman-complete-service.jsp" class="dropdown-item">Complete Service</a>
+                            <a href="serviceman-rejected-service.jsp" class="dropdown-item">Rejected Service</a>
                         </div>
                     </div>
                      <div class="nav-item dropdown">
