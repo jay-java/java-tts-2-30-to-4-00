@@ -64,44 +64,27 @@
 			<div class="row g-12">
 				<div class="col-md-8 wow fadeInUp" data-wow-delay="0.1s">
 					<div class="bg-light p-5 h-100 d-flex align-items-center">
-						
-						<%
-						String msg  = (String)request.getAttribute("msg");
-						if(msg!=null){
-							out.print(msg);
-						}
-						%>
-						<%
-						String msg2  = (String)request.getAttribute("msg2");
-						if(msg2!=null){
-							out.print(msg2);
-						}
-						%>
+						<%String email = (String)request.getAttribute("email"); %>
+						<%int otp  = (Integer)(request.getAttribute("otp")); %>
 						<form action="ServiceManController" method="post">
 							<div class="row g-3">
 								<div class="col-md-12">
 									<div class="form-floating">
-										<input type="email" class="form-control" id="email" name="email"
-											placeholder="Your Email"> <label for="email">Your
-											Email</label>
-									</div>
-								</div>
-								<div class="col-md-12">
-									<div class="form-floating">
-										<input type="text" class="form-control" id="name" name="password"
-											placeholder="Your Password"> <label for="name">Your
-											Password</label>
+										<input type="hidden" name="email" value="<%=email%>">
+										<input type="hidden" name="otp1" value="<%=otp%>">
+										<input type="text" class="form-control" id="email" name="otp2"
+											placeholder="Your Email"> <label for="email">Enter OTP
+											</label>
 									</div>
 								</div>
 
 								<div class="col-12">
 									<button class="btn btn-primary w-100 py-3" type="submit"
-										name="action" value="login">Login</button>
+										name="action" value="verify">Verify</button>
 								</div>
 							</div>
 						</form>
 						<br>
-						<a href="serviceman-forgot-password.jsp">Forgot Password ?</a>
 					</div>
 				</div>
 			</div>

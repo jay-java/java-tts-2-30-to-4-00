@@ -65,18 +65,6 @@
 				<div class="col-md-8 wow fadeInUp" data-wow-delay="0.1s">
 					<div class="bg-light p-5 h-100 d-flex align-items-center">
 						
-						<%
-						String msg  = (String)request.getAttribute("msg");
-						if(msg!=null){
-							out.print(msg);
-						}
-						%>
-						<%
-						String msg2  = (String)request.getAttribute("msg2");
-						if(msg2!=null){
-							out.print(msg2);
-						}
-						%>
 						<form action="ServiceManController" method="post">
 							<div class="row g-3">
 								<div class="col-md-12">
@@ -86,22 +74,14 @@
 											Email</label>
 									</div>
 								</div>
-								<div class="col-md-12">
-									<div class="form-floating">
-										<input type="text" class="form-control" id="name" name="password"
-											placeholder="Your Password"> <label for="name">Your
-											Password</label>
-									</div>
-								</div>
 
 								<div class="col-12">
 									<button class="btn btn-primary w-100 py-3" type="submit"
-										name="action" value="login">Login</button>
+										name="action" value="get otp">Get OTP</button>
 								</div>
 							</div>
 						</form>
 						<br>
-						<a href="serviceman-forgot-password.jsp">Forgot Password ?</a>
 					</div>
 				</div>
 			</div>

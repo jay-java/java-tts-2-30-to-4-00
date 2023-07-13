@@ -1,57 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@include file="navbar.jsp"%>
+    pageEncoding="UTF-8"%>
+     <%@include file="serviceman-navbar.jsp" %>
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-<meta charset="utf-8">
-<title>Plumberz - Free Plumbing Website Template</title>
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<meta content="" name="keywords">
-<meta content="" name="description">
-
-<!-- Favicon -->
-<link href="img/favicon.ico" rel="icon">
-
-<!-- Google Web Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-	href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
-	rel="stylesheet">
-
-<!-- Icon Font Stylesheet -->
-<link
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-	rel="stylesheet">
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-	rel="stylesheet">
-
-<!-- Libraries Stylesheet -->
-<link href="lib/animate/animate.min.css" rel="stylesheet">
-<link href="lib/owlcarousel/assets/owl.carousel.min.css"
-	rel="stylesheet">
-<link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
-	rel="stylesheet" />
-
-<!-- Customized Bootstrap Stylesheet -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Template Stylesheet -->
-<link href="css/style.css" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Insert title here</title>
 </head>
-
 <body>
+
 	<!-- Page Header Start -->
 	<div class="container-fluid page-header mb-5 py-5">
 		<div class="container">
-			<h1 class="display-3 text-white mb-3 animated slideInDown">Login</h1>
+			<h1 class="display-3 text-white mb-3 animated slideInDown">Register</h1>
 			<nav aria-label="breadcrumb animated slideInDown">
 				<ol class="breadcrumb text-uppercase">
 					<li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-					<li class="breadcrumb-item text-white active" aria-current="page">ServiecMan Login</li>
+					<li class="breadcrumb-item text-white active" aria-current="page">ServiecMan Register</li>
 				</ol>
 			</nav>
 		</div>
@@ -64,44 +29,37 @@
 			<div class="row g-12">
 				<div class="col-md-8 wow fadeInUp" data-wow-delay="0.1s">
 					<div class="bg-light p-5 h-100 d-flex align-items-center">
-						
-						<%
-						String msg  = (String)request.getAttribute("msg");
-						if(msg!=null){
-							out.print(msg);
-						}
-						%>
-						<%
-						String msg2  = (String)request.getAttribute("msg2");
-						if(msg2!=null){
-							out.print(msg2);
-						}
-						%>
 						<form action="ServiceManController" method="post">
 							<div class="row g-3">
-								<div class="col-md-12">
+							<div class="col-md-12">
 									<div class="form-floating">
-										<input type="email" class="form-control" id="email" name="email"
-											placeholder="Your Email"> <label for="email">Your
-											Email</label>
+										<input type="hidden" class="form-control" id="name" name="email" value="<%=s.getEmail()%>"
+											placeholder="Your Name">
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-floating">
-										<input type="text" class="form-control" id="name" name="password"
-											placeholder="Your Password"> <label for="name">Your
-											Password</label>
+										<input type="password" class="form-control" id="name" name="op"	placeholder="Old Password"> <label for="name">Old Password</label>
 									</div>
 								</div>
+								<div class="col-md-12">
+									<div class="form-floating">
+										<input type="password" class="form-control" id="name" name="np"	placeholder="New Password"> <label for="name">New Password</label>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-floating">
+										<input type="password" class="form-control" id="name" name="cnp"	placeholder="Confirm New Password"> <label for="name">Confirm New Password</label>
+									</div>
+								</div>
+								
 
 								<div class="col-12">
 									<button class="btn btn-primary w-100 py-3" type="submit"
-										name="action" value="login">Login</button>
+										name="action" value="change password">Change Password</button>
 								</div>
 							</div>
 						</form>
-						<br>
-						<a href="serviceman-forgot-password.jsp">Forgot Password ?</a>
 					</div>
 				</div>
 			</div>
