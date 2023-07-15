@@ -38,7 +38,7 @@
 					<td><%=s1.getService_duration()%></td>
 					<td><%=s1.getService_category()%></td>
 					<td><a href="ServiceController?action=edit&sid=<%=s1.getSid()%>">Edit</a></td>
-					<td><a href="">Delete</a></td>
+					<td><a href="serviceman-delete-service.jsp?sid=<%=s1.getSid()%>">Delete</a></td>
 				</tr>
 				<%
 				}

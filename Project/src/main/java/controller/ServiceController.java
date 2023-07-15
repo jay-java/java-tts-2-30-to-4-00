@@ -32,6 +32,10 @@ public class ServiceController extends HttpServlet {
 		String action = request.getParameter("action");
 		if(action.equalsIgnoreCase("edit")) {
 			int id = Integer.parseInt(request.getParameter("sid"));
+			System.out.println(id);
+			ServicemanServices s = ServicemanServiceDao.getServiceBySid(id);
+			request.setAttribute("data", s);
+			request.getRequestDispatcher("serviceman-single-service.jsp").forward(request, response);
 		}
 	}
 
@@ -49,6 +53,16 @@ public class ServiceController extends HttpServlet {
 			s.setService_category(request.getParameter("scategory"));
 			ServicemanServiceDao.insertService(s);
 			response.sendRedirect("serviceman-home.jsp");
+		}
+		else if(action.equalsIgnoreCase("update")) {
+			ServicemanServices s = new ServicemanServices();
+			s.setSid(Integer.parseInt(request.getParameter("sid")));
+			s.setService_name(request.getParameter("sname"));
+			s.setSprice(Integer.parseInt(request.getParameter("sprice")));
+			s.setService_duration(request.getParameter("sduration"));
+			s.setService_category(request.getParameter("scategory"));
+			ServicemanServiceDao.updateService(s);
+			response.sendRedirect("serviceman-manage-service.jsp");
 		}
 	}
 
