@@ -64,18 +64,18 @@
 			<div class="row g-12">
 				<div class="col-md-8 wow fadeInUp" data-wow-delay="0.1s">
 					<div class="bg-light p-5 h-100 d-flex align-items-center">
-						<form>
+						<form action="CustomerController" method="post">
 							<div class="row g-3">
 								<div class="col-md-12">
 									<div class="form-floating">
-										<input type="email" class="form-control" id="email"
+										<input type="email" class="form-control" id="email" name="email"
 											placeholder="Your Email"> <label for="email">Your
 											Email</label>
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-floating">
-										<input type="text" class="form-control" id="name"
+										<input type="password" class="form-control" id="name" name="password"
 											placeholder="Your Password"> <label for="name">Your
 											Password</label>
 									</div>

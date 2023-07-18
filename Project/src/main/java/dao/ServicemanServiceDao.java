@@ -101,4 +101,26 @@ public class ServicemanServiceDao {
 			e.printStackTrace();
 		}
 	}
+	public static List<ServicemanServices> getAllServices() {
+		List<ServicemanServices> list = new ArrayList<ServicemanServices>();
+		try {
+			Connection con = DBConnecrtion.createConnection();
+			String sql = "select * from service";
+			PreparedStatement pst = con.prepareStatement(sql);
+			ResultSet rs = pst.executeQuery();
+			while (rs.next()) {
+				ServicemanServices s = new ServicemanServices();
+				s.setSid(rs.getInt("sid"));
+				s.setServiceman_id(rs.getInt("s_id"));
+				s.setService_name(rs.getString("s_name"));
+				s.setSprice(rs.getInt("s_price"));
+				s.setService_duration(rs.getString("s_duration"));
+				s.setService_category(rs.getString("s_category"));
+				list.add(s);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
 }
