@@ -31,8 +31,12 @@ public class BookingController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		String action = request.getParameter("action");
+		if(action.equalsIgnoreCase("confirm")) {
+			int bid = Integer.parseInt(request.getParameter("bid"));
+			BookingDao.updateBookingStatus(bid);
+			response.sendRedirect("serviceman-home.jsp");
+		}
 	}
 
 	/**
@@ -47,6 +51,7 @@ public class BookingController extends HttpServlet {
 			b.setCid(Integer.parseInt(request.getParameter("cid")));
 			System.out.println(request.getParameter("cid"));
 			b.setSid(Integer.parseInt(request.getParameter("sid")));
+			b.setSer_id(Integer.parseInt(request.getParameter("serid")));
 			System.out.println(request.getParameter("sid"));
 			b.setSprice(Integer.parseInt(request.getParameter("sprice")));
 			System.out.println(request.getParameter("sprice"));

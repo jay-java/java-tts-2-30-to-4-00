@@ -1,3 +1,4 @@
+<%@page import="dao.BookingDao"%>
 <%@page import="dao.ServicemanServiceDao"%>
 <%@page import="model.ServicemanServices"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -28,12 +29,14 @@
 						out.print(s1.getService_name());
 						%>
 						<br>
+						<%boolean flag = BookingDao.checkBookedService(s.getId(), id); %>
+						<%if(flag == false){ %>
+						
 						<form action="BookingController" method="post">
 							<div class="row g-3">
 								<input type="hidden" name="cid" value="<%=s.getId()%>">
 								<input type="hidden" name="sid" value="<%=s1.getSid()%>">
-
-
+								<input type="hidden" name="serid" value="<%=s1.getServiceman_id()%>">
 								<div class="col-md-12">
 									<div class="form-floating">
 										<input type="text" class="form-control" id="name"
@@ -47,6 +50,7 @@
 								</div>
 							</div>
 						</form>
+						<%} %>
 					</div>
 				</div>
 			</div>

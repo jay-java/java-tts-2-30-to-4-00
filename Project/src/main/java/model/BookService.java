@@ -1,8 +1,15 @@
 package model;
 
 public class BookService {
-	private int bid,cid,sid,sprice;
+	private int bid,cid,sid,ser_id,sprice;
 	private String booking_status,payment_status;
+	
+	public int getSer_id() {
+		return ser_id;
+	}
+	public void setSer_id(int ser_id) {
+		this.ser_id = ser_id;
+	}
 	public int getBid() {
 		return bid;
 	}
@@ -39,10 +46,11 @@ public class BookService {
 	public void setPayment_status(String payment_status) {
 		this.payment_status = payment_status;
 	}
+	
 	@Override
 	public String toString() {
-		return "BookiService [bid=" + bid + ", cid=" + cid + ", sid=" + sid + ", sprice=" + sprice + ", booking_status="
-				+ booking_status + ", payment_status=" + payment_status + "]";
+		return "BookService [bid=" + bid + ", cid=" + cid + ", sid=" + sid + ", ser_id=" + ser_id + ", sprice=" + sprice
+				+ ", booking_status=" + booking_status + ", payment_status=" + payment_status + "]";
 	}
 	
 }
