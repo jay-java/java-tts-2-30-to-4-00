@@ -152,4 +152,28 @@ public class BookingDao {
 			e.printStackTrace();
 		}
 	}
+	public static List<BookService> getConfirmServiceForCustomer(int cid){
+		List<BookService> list = new ArrayList<BookService>();
+		try {
+			Connection conn = DBConnecrtion.createConnection();
+			String sql="select * from book_services where cid=? and booking_status='confirm'";
+			PreparedStatement pst = conn.prepareStatement(sql);
+			pst.setInt(1, cid);
+			ResultSet rs = pst.executeQuery();
+			while(rs.next()) {
+				BookService b = new BookService();
+				b.setBid(rs.getInt("bid"));
+				b.setCid(rs.getInt("cid"));
+				b.setSid(rs.getInt("sid"));
+				b.setSprice(rs.getInt("booking_price"));
+				b.setBooking_status(rs.getString("booking_status"));
+				b.setPayment_status(rs.getString("payment_status"));
+				list.add(b);
+			}
+			System.out.println("done");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
 }
