@@ -21,7 +21,7 @@
 		/*  alert("1");  */
 		var number=document.getElementById("amount").value;
 		/* var cid=document.getElementById("cid").value; */
-		xhttp.open("GET","http://localhost:8080/Project/OrderCreation?amount="+number,false);
+		xhttp.open("GET","http://localhost:8080/Project/OrderCreation?amount="+number+"bid="+bid,false);
 		/* alert("2"); */
 		xhttp.send();
 		RazorpayOrderId=xhttp.responseText;
@@ -84,6 +84,7 @@
 <%int am = Integer.parseInt(request.getParameter("amount")); %>
 <center> 
 	<input type="hidden" id="amount" value="<%=am%>">
+	
 	<button id="payButton" onclick="CreateOrderID()" class="bttnStyle">Pay Now</button>
 </center>
 </body>

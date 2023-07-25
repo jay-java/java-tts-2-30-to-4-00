@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	<%@include file="navbar.jsp" %>
+<%@include file="navbar.jsp"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -101,7 +101,6 @@
 		</div>
 	</div>
 	<!-- Carousel End -->
-
 
 	<!-- Service Start -->
 	<div class="container-xxl py-5">

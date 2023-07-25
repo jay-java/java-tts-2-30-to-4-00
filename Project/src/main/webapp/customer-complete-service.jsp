@@ -57,7 +57,6 @@
 									</tr>
 								</tbody>
 							</table>
-							* - Mandatory Fields
 						</form>
 					</td>
 				</tr>
