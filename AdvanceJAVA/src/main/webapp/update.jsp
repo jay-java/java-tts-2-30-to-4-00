@@ -1,6 +1,8 @@
 <%@page import="model.Model"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@page isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,11 +14,11 @@
 <form action="UserController" method="post">
 		<table>
 		<tr>
-				<td><input type="hidden" name="id" value="<%=m.getId()%>"></td>
+				<td><input type="hidden" name="id" value="${m.id }"></td>
 			</tr>
 			<tr>
 				<td>Name :</td>
-				<td><input type="text" name="name" value="<%=m.getName()%>"></td>
+				<td><input type="text" name="name" value="${m.name }"></td>
 			</tr>
 			<tr>
 				<td>Contact :</td>
