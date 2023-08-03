@@ -8,13 +8,12 @@ import org.hibernate.cfg.Configuration;
 
 public class App {
 	public static void main(String[] args) {
-		SessionFactory sf = new Configuration().configure("com/hibernate/hibernate.cfg.xml").buildSessionFactory();
+		SessionFactory sf = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
 		Session session = sf.openSession();
 		Transaction tx = session.beginTransaction();
 		
-		Student s1 = new Student(4, "android", 987654321);
-		session.delete(s1);
-		
+		Studentssss s = session.get(Studentssss.class, 2);
+		System.out.println(s);
 		tx.commit();
 		session.close();
 		sf.close();
