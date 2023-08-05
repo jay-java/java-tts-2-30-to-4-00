@@ -2,8 +2,15 @@ package model;
 
 public class Model {
 	private int id;
-	private String name,address,email,password;
+	private String name,address,email,password,image;
 	private long contact;
+	
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
+	}
 	public int getId() {
 		return id;
 	}
@@ -40,10 +47,11 @@ public class Model {
 	public void setContact(long contact) {
 		this.contact = contact;
 	}
+	
 	@Override
 	public String toString() {
 		return "Model [id=" + id + ", name=" + name + ", address=" + address + ", email=" + email + ", password="
-				+ password + ", contact=" + contact + "]";
+				+ password + ", image=" + image + ", contact=" + contact + "]";
 	}
 	
 }

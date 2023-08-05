@@ -13,13 +13,14 @@ public class UserDao {
 	public static void insertUser(Model m) {
 		try {
 			Connection conn = DBConnection.createConnection();
-			String sql = "insert into user(name,contact,address,email,password) values(?,?,?,?,?)";
+			String sql = "insert into user(image,name,contact,address,email,password) values(?,?,?,?,?,?)";
 			PreparedStatement pst = conn.prepareStatement(sql);
-			pst.setString(1, m.getName());
-			pst.setLong(2, m.getContact());
-			pst.setString(3, m.getAddress());
-			pst.setString(4, m.getEmail());
-			pst.setString(5, m.getPassword());
+			pst.setString(1, m.getImage());
+			pst.setString(2, m.getName());
+			pst.setLong(3, m.getContact());
+			pst.setString(4, m.getAddress());
+			pst.setString(5, m.getEmail());
+			pst.setString(6, m.getPassword());
 			pst.executeUpdate();
 			System.out.println("data inserted");
 		} catch (Exception e) {
@@ -54,6 +55,7 @@ public class UserDao {
 			if(rs.next()) {
 				m1 = new Model();
 				m1.setId(rs.getInt("id"));
+				m1.setImage(rs.getString("image"));
 				m1.setName(rs.getString("name"));
 				m1.setContact(rs.getLong("contact"));
 				m1.setAddress(rs.getString("address"));
@@ -76,6 +78,7 @@ public class UserDao {
 				Model m1 = new Model();
 				m1.setId(rs.getInt("id"));
 				m1.setName(rs.getString("name"));
+				m1.setImage(rs.getString("image"));
 				m1.setContact(rs.getLong("contact"));
 				m1.setAddress(rs.getString("address"));
 				m1.setEmail(rs.getString("email"));

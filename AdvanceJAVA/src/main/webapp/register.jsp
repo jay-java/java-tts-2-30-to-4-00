@@ -7,8 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="UserController" method="post">
+	<form action="UserController" method="post" enctype="multipart/form-data">
 		<table>
+			<tr>
+				<td>Name :</td>
+				<td><input type="file" name="image"></td>
+			</tr>
 			<tr>
 				<td>Name :</td>
 				<td><input type="text" name="name"></td>

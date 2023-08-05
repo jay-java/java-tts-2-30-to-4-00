@@ -44,6 +44,7 @@
 			<thead>
 				<tr>
 					<th scope="col">Id</th>
+					<th scope="col">Image</th>
 					<th scope="col">Name</th>
 					<th scope="col">Contact</th>
 					<th scope="col">Address</th>
@@ -62,6 +63,7 @@
 				%>
 				<tr>
 					<th scope="row"><%=m1.getId()%></th>
+					<td><img src="img/<%=m1.getImage()%>" height="100" width="100"></td>
 					<td><%=m1.getName()%></td>
 					<td><%=m1.getContact()%></td>
 					<td><%=m1.getAddress()%></td>
