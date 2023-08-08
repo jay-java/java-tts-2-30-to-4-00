@@ -739,3 +739,4 @@
 2023-08-05 17:17:26,550 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2023-08-05 17:17:26,550 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jay-pc\JAVA TTS 2-30 to 4-00\HibernateCore\src\main\resources
 2023-08-05 17:17:26,552 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-05 17:17:26,553 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jay-pc\JAVA TTS 2-30 to 4-00\HibernateCore\src\test\resources
