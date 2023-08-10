@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<bean class="core.User" name="u1">
+		<property name="id">
+			<value>1</value>
+		</property>
+		<property name="name">
+			<value>java</value>
+		</property>
+		<property name="contact">
+			<value>987563210</value>
+		</property>
+	</bean>
+	
+	<bean class="core.User" name="u2">
+		<property name="id" value="2"/>
+		<property name="name" value="python"/>
+		<property name="contact" value="987565423"/>
+		<property name="list">
+			<list>
+				<value>abc</value>
+				<value>abc</value>
+				<value>abc</value>
+				<value>abc</value>
+			</list>
+		</property>
+		<property name="set">
+			<set>
+				<value>abc</value>
+				<value>def</value>
+			</set>
+		</property>
+		<property name="map">
+			<map>
+				<entry key="1" value="java"/>
+				<entry key="2" value="java"/>
+				<entry key="3" value="java"/>
+			</map>
+		</property>
+	</bean>
+	
+</beans>
