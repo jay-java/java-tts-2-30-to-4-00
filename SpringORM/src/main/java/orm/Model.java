@@ -10,6 +10,20 @@ public class Model {
 	private String name;
 	private long contact;
 	private String address;
+	
+	public Model() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Model(int id, String name, long contact, String address) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.contact = contact;
+		this.address = address;
+	}
+
 	public int getId() {
 		return id;
 	}
