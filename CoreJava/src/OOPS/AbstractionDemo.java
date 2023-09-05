@@ -1,13 +1,22 @@
 package OOPS;
-abstract class RBI{
-    abstract public void interest();
-    abstract public void HL();
-    static int i=1;
-    public static void repoRate() {
-    	System.out.println("+-4% i = "+i);
-    }
+
+abstract class RBI {
+	abstract public void interest();
+
+	abstract public void HL();
+
+	public void run() {
+		System.out.println("");
+	}
+
+	static int i = 1;
+
+	public static void repoRate() {
+		System.out.println("+-4% i = " + i);
+	}
 }
-class SBI extends RBI{
+
+class SBI extends RBI {
 
 	@Override
 	public void interest() {
@@ -20,9 +29,10 @@ class SBI extends RBI{
 		// TODO Auto-generated method stub
 		System.out.println("sbi HL 7%");
 	}
-	
+
 }
-class PNB extends RBI{
+
+class PNB extends RBI {
 
 	@Override
 	public void interest() {
@@ -35,23 +45,25 @@ class PNB extends RBI{
 		// TODO Auto-generated method stub
 		System.out.println("pnb HL : 9%");
 	}
-	
+
 }
-class JAVA extends RBI{
+
+class JAVA extends RBI {
 
 	@Override
 	public void interest() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void HL() {
 		// TODO Auto-generated method stub
-		
+
 	}
-	
+
 }
+
 public class AbstractionDemo {
 	public static void main(String[] args) {
 		SBI s = new SBI();

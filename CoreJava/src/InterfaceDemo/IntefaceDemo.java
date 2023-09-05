@@ -2,6 +2,7 @@ package InterfaceDemo;
 
 interface inter1{
 	public void interface1();
+	
 	public static void interface4() {
 		System.out.println("static in interface");
 	}
@@ -37,5 +38,6 @@ public class IntefaceDemo {
 	public static void main(String[] args) {
 		Intercall i  = new Intercall();
 		inter1.interface4();
+		
 	}
 }

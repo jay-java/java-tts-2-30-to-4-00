@@ -8,7 +8,7 @@ import java.util.TreeSet;
 public class TreeSetDemo {
 	public static void main(String[] args) {
 		Set set = new TreeSet();
-		set.add(454);
+		set.add(685);
 		set.add(0);
 		set.add(-3453);
 		set.add(1);

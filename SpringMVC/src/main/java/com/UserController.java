@@ -3,18 +3,21 @@ package com;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class UserController {
+	@Autowired
+	private Dao dao;
+	
 	@RequestMapping("/")
 	public String index(Model m) {
-		
 		return "index";
 	}
 	
@@ -30,8 +33,13 @@ public class UserController {
 		return "about"; 
 	}
 	
-	@RequestMapping("/contact")
+	@RequestMapping("/addUser")
 	public String contact() {
-		return "contact";
+		return "add_user";
+	}
+	
+	@RequestMapping("/register")
+	public RedirectV registerUser(@ModelAttribute User u) {
+		this.dao.insertUpdteUser(u);
 	}
 }
